@@ -1,7 +1,7 @@
 <?php
 //
 //  Teste :
-//  1.Si chiffres = Erreur
+//  1.Si que chiffres = Erreur
 //  2.Si moin de 5 Lettres = ERREUR
 //  3.Si Plus de 25 Lettres = ERREUR
 //  4.Si Existe deja = ERREUR
@@ -17,6 +17,7 @@ class testeurFamille
     {
         $this->famille =  $var ;
         $this->famille = strip_tags($this->famille);
+        $this->famille = ucwords($this->famille);//1er lettre majuscule
         $f = $this->famille ;
         echo '<h1>'.$f.'</h1>';
     }
@@ -65,27 +66,53 @@ class testeurFamille
         }
     }
     
+    private function CompareAvecBdd()
+    {
+        $f = $this->famille ;
+        $ite = $_COOKIE["SERVEUR"] ;
+        $racine = $_COOKIE["racine"] ;
+        include_once("$racine/fonction/bdd.php") ;
+    //
+    // Debut du comparatif
+    //
+        $req = $bdd->prepare('SELECT * FROM famille WHERE name = ?');
+        $req->execute(array($f));
+        $donnees = $req->fetch() ;
+        if($donnees)
+        {
+            echo '<h1 id="erreur">Cette famille existe deja <br /> Merci :)</h1>' ;
+            $this -> suiteDuScript() ;
+        }
+    }
+    
+    private function saveFamille()
+    {
+        $f = $this->famille ;
+        $ite = $_COOKIE["SERVEUR"] ;
+        $racine = $_COOKIE["racine"] ;
+        include_once("$racine/fonction/bdd.php") ;
+    //
+    // Debut de la sauvegarde
+    //
+        include("$racine/fonction/bdd.php") ;
+        
+        $req = $bdd->prepare('INSERT INTO famille(name) VALUES(:name)');
+        $req->execute(array(
+            'name' => $f
+            ));
+        
+        echo 'La Famille a bien été ajouté !';
+    }
+    
     public function leTester()
     {
         $this -> taille() ;
         $this -> effaceCaractereSpeciaux() ;
         $this -> queChiffre() ;
+        $this -> CompareAvecBdd() ;
+        $this -> saveFamille() ;
     }
     
 }
-class CompareFamille
-{
-    
-    
-    
-}
-class enregistreFamille
-{
-    
-    
-    
-}
-
-
 
 ?>
