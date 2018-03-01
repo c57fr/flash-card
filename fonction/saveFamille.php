@@ -115,4 +115,22 @@ class testeurFamille
     
 }
 
+    function afficheFamille()
+    {
+        
+$ite = $_COOKIE["SERVEUR"] ;
+$racine = $_COOKIE["racine"] ;
+        
+        include_once("$racine/fonction/bdd.php") ;
+        
+        $reponse = $bdd->query('SELECT name FROM famille ');
+        
+        $donnees = $reponse->fetch() ;
+        $i=0;
+        while($donnees = $reponse->fetch() )
+        {   
+            echo '<div class="famille">'.$donnees[$i].'</div>'; 
+            $i+1;
+        }
+    }
 ?>

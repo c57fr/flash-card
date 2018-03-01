@@ -12,10 +12,12 @@ if( @$_GET['famille'] ) // si une famille est envoyer
     $save -> leTester() ;
 }
 else{
-
+    include_once("$racine/fonction/saveFamille.php") ;
+    
 include_once("$racine/Vue/head.html") ;
 include_once("$racine/Vue/menu.html") ;
 include_once("$racine/Vue/creation/famille.html") ;
+    afficheFamille() ;
 
 
 
