@@ -1,9 +1,15 @@
-<form method="post" action="creation.php">
-   
+<hr />
+
+<form method="POST" action="http://<?php echo "$ite/controleur/creationFlashCards.php" ;?>">
+   <?php
+    afficheFamilleDeroulant() ;
+?>
    <!--
     Ici rajoute les famille dans un menu deroulant
     -->
-    <input type="text" name="famille" />
+    <textarea name="question">azerty</textarea>
+    <hr />
+    <textarea name="reponse">qwerty</textarea>
     
     <input type="submit" />
 
