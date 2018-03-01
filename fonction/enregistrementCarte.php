@@ -15,7 +15,7 @@ $req->execute(array(
 	'famille' => $Famille 
 	));
 
-echo 'La Flash-Cards a bien été ajouté !';    
+echo '<hr />La Flash-Cards a bien été ajouté !';    
     
     
     

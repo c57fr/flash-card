@@ -17,6 +17,10 @@ if( @$_POST['question'] ) // si une carte est envoyer
     echo '<hr />'.$question ;
     echo '<hr />'.$reponse ;
 */
+    
+    
+include_once("$racine/Vue/head.html") ;
+include_once("$racine/Vue/menu.html") ;
     $cards= new saveCarte($question , $reponse , $Famille ) ;
 }
 else{
