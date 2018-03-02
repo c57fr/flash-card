@@ -1,0 +1,27 @@
+
+<hr />
+<div id='LaFamille'>
+    <?php
+        echo $carte['famille']  ;
+    ?>
+</div>
+<div id='question'>
+    <?php
+        echo $carte['question']  ;
+    ?>
+    
+</div>
+<hr />
+
+<textarea>Block-notes , juste pour coucher vos idée</textarea>
+
+
+    <p>Afficher La reponse</p>
+    
+    
+<a href="http://<?php echo $ite ; ?>/controleur/affichageFlashCard.php?AfficheReponse=<?php echo $carte['ID'];?>" >
+    <div id='boutonReponse'>
+        Afficher la Reponse
+    </div>
+</a>
+    
