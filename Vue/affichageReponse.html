@@ -1,0 +1,37 @@
+
+<hr />
+<div id='LaFamille'>
+    LaFamille => 
+    <?php
+        echo $carte['famille']  ;
+    ?>
+</div>
+<div id='question'>
+    question => 
+    <?php
+        echo $carte['question']  ;
+    ?>
+    
+<hr />
+</div>
+<div id='reponse'>
+    reponse => 
+    <?php
+        echo $carte['reponse']  ;
+    ?>
+    
+</div>
+    
+<a href="http://<?php echo $ite ; ?>/controleur/affichageFlashCard.php?AfficheReponse=<?php echo $carte['ID'];?>&amp;reponseJuste=oui" >
+        <div id='boutonReponse'>
+            <p>La reponse est juste !</p>
+    </div>
+</a>
+    
+    
+<a href="http://<?php echo $ite ; ?>/controleur/affichageFlashCard.php?AfficheReponse=<?php echo $carte['ID'];?>&amp;reponseJuste=non" >
+        <div id='boutonReponse'>
+            <p>La reponse est fausse ?</p>
+    </div>
+</a>
+    
