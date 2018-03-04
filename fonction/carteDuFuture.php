@@ -1,6 +1,6 @@
 <?php
 //
-//  Determine le niveau de la carte , celon qu'elle est reussi ou non la date de vue est placer en concequance , insi que le nouveau nivea 
+//  Détermine le niveau de la carte , selon qu'elle soit reussie ou non la date de vue est placée en conséquence , ainsi que le nouveau niveau. 
 //
 class carteDuFuture
 {
@@ -22,7 +22,7 @@ class carteDuFuture
     public function oui($var)
     {
 //
-// Le niveau gagne +1 et le temp corespondant au niveau
+// Le niveau gagne +1 et le temps correspondant au niveau
 //
         $ite = $_COOKIE["SERVEUR"] ;
         $racine = $_COOKIE["racine"] ;
@@ -47,7 +47,7 @@ class carteDuFuture
     public function non($var)
     {
 //
-// dateDeVue = 1 JOUR dans le future niveau == 1 !
+// dateDeVue = 1 JOUR dans le futur niveau == 1 !
 //
         $ite = $_COOKIE["SERVEUR"] ;
         $racine = $_COOKIE["racine"] ;

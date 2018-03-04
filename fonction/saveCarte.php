@@ -41,13 +41,13 @@ class saveCarte
         
         if(strlen($question) < 5 || strlen($question) > 255)
         {
-            echo '<h1 id="erreur">Entre 5 et 255 lettre STP  :-)</h1>' ;
+            echo '<h1 id="erreur">Entre 5 et 255 lettres STP  :-)</h1>' ;
             exit('<hr />$question') ;
         }
         
         if(strlen($reponse) < 5 || strlen($reponse) > 255)
         {
-            echo '<h1 id="erreur">Entre 5 et 255 lettre STP  :-)</h1>' ;
+            echo '<h1 id="erreur">Entre 5 et 255 lettres STP  :-)</h1>' ;
             exit('<hr />$reponse') ;
         }
     }

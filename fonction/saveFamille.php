@@ -80,7 +80,7 @@ class testeurFamille
         $donnees = $req->fetch() ;
         if($donnees)
         {
-            echo '<h1 id="erreur">Cette famille existe deja <br /> Merci :)</h1>' ;
+            echo '<h1 id="erreur">Cette famille existe déjà <br /> Merci :)</h1>' ;
             $this -> suiteDuScript() ;
         }
     }

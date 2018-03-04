@@ -7,10 +7,12 @@ nav
     
     margin: 20px ;
     padding: 20px ;
+    font-size: 150% ;
     
 -         background-image: url("img/cosmos_wide-b549c59e70c5ebe70df228384fdc2ad37c83767a.jpg");
     
          background-color:black;
+         background-color:darksalmon;
 }
 body
 {
@@ -39,7 +41,10 @@ body
 {
     border: black 1px solid ;
 
+    background-color: darkgrey ;
+    background-color: chocolate ;
     background-color: aquamarine ;
+    background-color: deepskyblue ;
     
     display: flex ;
     flex-direction: column;
