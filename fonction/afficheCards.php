@@ -52,14 +52,4 @@ $req->execute(array($ID));
     
     
 }
-
-
-
-
-
-
-
-
-
-
 ?>

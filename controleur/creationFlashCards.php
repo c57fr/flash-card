@@ -31,5 +31,6 @@ else{
     include_once("$racine/fonction/afficheFamilleDeroulant.php") ;
 
     include_once("$racine/Vue/creation/carte.html") ;
+        echo "</div>" ;
 }
 ?>

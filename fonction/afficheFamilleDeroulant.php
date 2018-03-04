@@ -1,4 +1,4 @@
-<hr />
+
 <?php
     function afficheFamilleDeroulant()
     {
@@ -25,7 +25,6 @@ while($donnees = $reponse->fetch() )
         {?> 
 <option value="<?php echo $donnees[$i] ; ?>"><?php echo $donnees[$i] ; ?></option>
     <?php
-            echo '<div class="famille">'.$donnees[$i].'</div>'; 
             $i+1;
         }
 
@@ -33,8 +32,6 @@ while($donnees = $reponse->fetch() )
     
     
 </select>
-<hr />
-
 <?php
     }
 

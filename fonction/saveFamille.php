@@ -128,8 +128,8 @@ $racine = $_COOKIE["racine"] ;
         $donnees = $reponse->fetch() ;
         $i=0;
         while($donnees = $reponse->fetch() )
-        {   
-            echo '<div class="famille">'.$donnees[$i].'</div>'; 
+        {
+            echo '<pre><p>'.$donnees[$i].'</p></pre>';
             $i+1;
         }
     }

@@ -14,12 +14,13 @@ if( @$_GET['famille'] ) // si une famille est envoyer
 else{
     include_once("$racine/fonction/saveFamille.php") ;
     
-include_once("$racine/Vue/head.html") ;
-include_once("$racine/Vue/menu.html") ;
-include_once("$racine/Vue/creation/famille.html") ;
+    include_once("$racine/Vue/head.html") ;
+    include_once("$racine/Vue/menu.html") ;
+    
+    echo "<div id='afficheFamille'>\n" ;
+    include_once("$racine/Vue/creation/famille.html") ;
+    
     afficheFamille() ;
-
-
-
+    echo "</div></section>" ;
 }
 ?>
