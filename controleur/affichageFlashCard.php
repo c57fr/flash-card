@@ -22,9 +22,7 @@ if(!isset($_GET['AfficheReponse']) && !isset($_GET['reponseJuste']))
 elseif( isset($_GET['AfficheReponse']) && !isset($_GET['reponseJuste'])) 
 {
     $carte = $question -> reponse($_GET['AfficheReponse']) ;
-    
-    include_once("$racine/Vue/affichageReponse.HTML") ;
-    
+    include_once("$racine/Vue/affichageReponse.html") ;
 }
 //
 // Si le resultat est recus , recalcule le prochain affichage
