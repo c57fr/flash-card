@@ -23,7 +23,6 @@ class afficheCards
         $_SESSION['ID'] = $donnees['ID'] ;
         $_SESSION['niveau'] = $donnees['niveau'] ;
         
-        echo '<h1> Session ID '.$_SESSION['ID'].'</h1>' ;
         
         return $donnees ;
     }

@@ -21,9 +21,6 @@ if(!isset($_GET['AfficheReponse']) && !isset($_GET['reponseJuste']))
 // Si la reponse est demander l'afficher
 elseif( isset($_GET['AfficheReponse']) && !isset($_GET['reponseJuste'])) 
 {
-    
-    echo '<h1>'.$_GET['AfficheReponse'].'</h1>';
-    
     $carte = $question -> reponse($_GET['AfficheReponse']) ;
     
     include_once("$racine/Vue/affichageReponse.HTML") ;
@@ -43,14 +40,10 @@ elseif( isset($_GET['reponseJuste']) )
     if( $reponse == 'oui')
     {
         $recalculeCards -> oui($ID) ;
-        echo '<h1>'.$_GET['reponseJuste'].'</h1>';
-        
     }
     elseif( $reponse == 'non')
     {
         $recalculeCards -> non($ID) ;
-        echo '<h1>non => '.$_GET['reponseJuste'].'</h1>';
-        
     }
     else{
         echo '<h1>Erreur imprevue :( </h1>' ;
