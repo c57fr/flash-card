@@ -11,6 +11,8 @@
 <section id='FlashCards'>
     <article>
         <?php
+
+$carte['question']= str_replace('/n', '<br/>', nl2br($carte['question']));
             echo $carte['question']  ;
         ?>
     </article>
@@ -18,6 +20,8 @@
 <section id='affichageReponse'>
 <article>
         <?php
+
+$carte['reponse']= str_replace('/n', '<br/>', nl2br($carte['reponse']));
             echo $carte['reponse']  ;
         ?>
 </article>

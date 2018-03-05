@@ -9,6 +9,9 @@
     <hr />
     <article id="FlashCards">
         <?php
+
+$carte['question']= str_replace('/n', '<br/>', nl2br($carte['question']));
+
             echo $carte['question']  ;
         ?>
     </article>
