@@ -22,7 +22,16 @@ $racine = $_COOKIE["racine"] ;
     
 <?php
 while($donnees = $reponse->fetch() )
-        {?> 
+        {
+//
+//  Ce souvient de la famille utiliser dernierement
+//    
+    if( @$_SESSION['famille']==$donnees[$i] )
+    {?>
+        <option value="<?php echo $donnees[$i] ; ?>" selected><?php echo $donnees[$i] ; ?></option>
+    <?php }
+// FIN    
+    ?> 
 <option value="<?php echo $donnees[$i] ; ?>"><?php echo $donnees[$i] ; ?></option>
     <?php
             $i+1;

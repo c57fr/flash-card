@@ -9,13 +9,19 @@ $req = $bdd->prepare('INSERT INTO cards(`question`, `reponse`, `famille`, `dateD
     $question =$_POST["question"] ;
     $reponse = $_POST["reponse"] ;
 
+
+$_SESSION['famille'] = $Famille ;
+
+
 $req->execute(array(
 	'question' => $question,
 	'reponse' => $reponse ,
 	'famille' => $Famille 
 	));
 
-echo '<hr />La Flash-Card à bien été ajoutée !';    
+
+echo '<hr />La Flash-Card à bien été ajoutée !' ;    
+    
     
     
     
