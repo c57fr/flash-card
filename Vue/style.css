@@ -11,11 +11,13 @@ nav
     
     background-color:black;
     background-color:darksalmon;
+    
 }
 body
 {
     background-image: url("img/88544695_o.jpg");
     background-image: url("img/cosmos_wide-b549c59e70c5ebe70df228384fdc2ad37c83767a.jpg");
+    background-image: url("img/649694main_pia15417-43_full.jpg");
 }
 #erreur
 {
@@ -26,6 +28,8 @@ body
 #creationFamille
 {
     border: black 1px solid ;
+    background-color:darksalmon;
+    font-size: 150% ;
 }
 #afficheFamille
 {
