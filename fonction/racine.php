@@ -1,6 +1,6 @@
 <?php
 //
-//  Met en memoire le nom du site pour les liens 
+//  Met en memoire le nom du site + le chemin absolue depuis la racine du serveur pour les liens 
 //
 
 

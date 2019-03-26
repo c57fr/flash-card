@@ -30,7 +30,7 @@ class testeurFamille
 
         include_once("$racine/Vue/head.html") ;
         include_once("$racine/Vue/menu.html") ;
-        include_once("$racine/Vue/creation/famille.html") ;
+        include_once("$racine/Vue/Formulaire/famille.html") ; 
         exit();
     }
     
