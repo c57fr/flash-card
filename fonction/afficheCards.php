@@ -11,7 +11,7 @@ class afficheCards
 // Selectionne et affiche UNE flash-cards au hasard Mais dons la date de vue est <= aujourd'huis
 //        le niveau != 0
 //      
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include_once("$racine/fonction/bdd.php") ;
@@ -32,7 +32,7 @@ class afficheCards
 //
 //
 //
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include_once("$racine/fonction/bdd.php") ;

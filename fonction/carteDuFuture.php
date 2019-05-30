@@ -11,7 +11,7 @@ class carteDuFuture
     
     public function __construct()
     {
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include_once("$racine/fonction/bdd.php") ;
@@ -24,7 +24,7 @@ class carteDuFuture
 //
 // Le niveau gagne +1 et le temps correspondant au niveau
 //
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include("$racine/fonction/bdd.php") ;
@@ -49,7 +49,7 @@ class carteDuFuture
 //
 // dateDeVue = 1 JOUR dans le futur niveau == 1 !
 //
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include("$racine/fonction/bdd.php") ;

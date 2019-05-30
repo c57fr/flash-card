@@ -28,7 +28,7 @@ class saveCarte
     private function enregistrementCarte()
     {
         
-    $ite = $_COOKIE["SERVEUR"] ;
+    $ite = $_COOKIE["serveur"] ;
     $racine = $_COOKIE["racine"] ;
     include_once("$racine/fonction/enregistrementCarte.php") ;
         

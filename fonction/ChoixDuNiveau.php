@@ -2,7 +2,7 @@
 //
 // dateDeVue = 1 JOUR dans le future niveau == 1 !
 //
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include("$racine/fonction/bdd.php") ;

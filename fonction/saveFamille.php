@@ -25,7 +25,7 @@ class testeurFamille
     public function suiteDuScript()
     {   
 
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
 
         include_once("$racine/Vue/head.html") ;
@@ -69,7 +69,7 @@ class testeurFamille
     private function CompareAvecBdd()
     {
         $f = $this->famille ;
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
         include_once("$racine/fonction/bdd.php") ;
     //
@@ -88,20 +88,31 @@ class testeurFamille
     private function saveFamille()
     {
         $f = $this->famille ;
-        $ite = $_COOKIE["SERVEUR"] ;
+        $ite = $_COOKIE["serveur"] ;
         $racine = $_COOKIE["racine"] ;
-        include_once("$racine/fonction/bdd.php") ;
+        $bdd =new PDO('mysql:host=localhost;dbname=flashCard','phpmyadmin','123456') ; 
     //
     // Debut de la sauvegarde
     //
-        include("$racine/fonction/bdd.php") ;
+//        include("$racine/fonction/bdd.php") ;
         
         $req = $bdd->prepare('INSERT INTO famille(name) VALUES(:name)');
         $req->execute(array(
             'name' => $f
             ));
         
-        echo 'La Famille a bien été ajouté !';
+       ?>
+        <h1>La Famille a bien été ajouté !</h1>
+        <h2>retour dans 3 segonde</h2>
+        <?php
+        echo '$f = '.$f  ;
+        echo '<hr />$ite = '.$_COOKIE["serveur"] ;
+        echo '<hr />$racine = '.$_COOKIE["racine"] ;
+        ?>
+        <META http-equiv="refresh" content="3999; URL=<?php echo 'http://'.$_COOKIE["serveur"] ;;  ?>">
+
+       
+       <?php
     }
     
     public function leTester()
@@ -118,7 +129,7 @@ class testeurFamille
     function afficheFamille()
     {
         
-$ite = $_COOKIE["SERVEUR"] ;
+$ite = $_COOKIE["serveur"] ;
 $racine = $_COOKIE["racine"] ;
         
         include_once("$racine/fonction/bdd.php") ;

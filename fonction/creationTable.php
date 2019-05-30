@@ -5,7 +5,7 @@ include_once("$racine/fonction/bdd.php");
 
 $creationFamille = "CREATE TABLE IF NOT EXISTS famille (
 idFamille SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-nom TEXT(550) NOT NULL
+name TEXT(550) NOT NULL
 ) " ;
  
 $creationCards = "CREATE TABLE IF NOT EXISTS cards (
