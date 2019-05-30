@@ -109,7 +109,7 @@ class testeurFamille
         echo '<hr />$ite = '.$_COOKIE["serveur"] ;
         echo '<hr />$racine = '.$_COOKIE["racine"] ;
         ?>
-        <META http-equiv="refresh" content="3999; URL=<?php echo 'http://'.$_COOKIE["serveur"] ;;  ?>">
+        <META http-equiv="refresh" content="3; URL=<?php echo 'http://'.$_COOKIE["serveur"] ;;  ?>">
 
        
        <?php

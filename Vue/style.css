@@ -108,7 +108,7 @@ nav
     font-size: 250% ;
     background-color: gray ;
 }
-#affichageReponse
+#affichageReponse , #boutonReponse
 {
     display: flex ;
         flex-direction: column;

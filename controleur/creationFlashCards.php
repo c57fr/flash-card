@@ -1,5 +1,5 @@
 <?php
-$ite = $_COOKIE["SERVEUR"] ;
+$ite = $_COOKIE["serveur"] ;
 $racine = $_COOKIE["racine"] ;
  //   include_once("$racine/Teste/receptionPoste.php") ;
     //exit();
@@ -30,7 +30,7 @@ else{
     
     include_once("$racine/fonction/afficheFamilleDeroulant.php") ;
 
-    include_once("$racine/Vue/creation/carte.html") ;
+    include_once("$racine/Vue/Formulaire/carte.html") ;
         echo "</div>" ;
 }
 ?>
