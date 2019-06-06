@@ -7,7 +7,7 @@ $racine = $_COOKIE["racine"] ;
         
         include_once("$racine/fonction/bdd.php") ;
         
-        $reponse = $bdd->query('SELECT name FROM famille ');
+        $reponse = $bdd->query('SELECT * FROM famille ');
         
         $donnees = $reponse->fetch() ;
         $i=0;
@@ -28,11 +28,11 @@ while($donnees = $reponse->fetch() )
 //    
     if( @$_SESSION['famille']==$donnees[$i] )
     {?>
-        <option value="<?php echo $donnees['famille'] ; ?>" selected><?php echo $donnees[$i] ; ?></option>
+        <option value="<?php echo $donnees['famille'] ; ?>" selected><?php echo $donnees['name'] ; ?></option>
     <?php }
 // FIN    
     ?> 
-<option value="<?php echo $donnees[5] ; ?>"><?php echo $donnees[$i] ; ?></option>
+<option value="<?php echo $donnees['famille'] ; ?>"><?php echo $donnees['name'] ; ?></option>
     <?php
             $i+1;
         }
