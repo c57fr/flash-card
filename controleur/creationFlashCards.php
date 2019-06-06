@@ -7,7 +7,7 @@ $racine = $_COOKIE["racine"] ;
 
 if( @$_POST['question'] ) // si une carte est envoyer 
 {
-    include_once("$racine/fonction/saveCarte.php") ;
+//    include_once("$racine/fonction/saveCarte.php") ;
     $carte = $_POST['question'] ;
     
     $Famille =$_POST["Famille"] ;
