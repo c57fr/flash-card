@@ -15,7 +15,7 @@ $row = $stmt->fetch() ;
 
         }
 
-//              $aaa = rechercheFmille(13);
+$aaa = rechercheFmille( GET['uuu'] );
         echo '<hr />oki doki <hr />' ;
-//        print_r($aaa) ;
+        print_r($aaa) ;
 ?>
