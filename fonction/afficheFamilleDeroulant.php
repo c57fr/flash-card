@@ -22,7 +22,6 @@ $racine = $_COOKIE["racine"] ;
 <?php
 while($donnees = $reponse->fetch() )
         {
-            print_r($donnees);
 //
 //  Ce souvient de la famille utiliser dernierement
 //    
