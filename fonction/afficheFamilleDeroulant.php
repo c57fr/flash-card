@@ -11,6 +11,7 @@ $racine = $_COOKIE["racine"] ;
         
         $donnees = $reponse->fetch() ;
         $i=0;
+        print_r($donnees) ;
 ?>
 
 <select name="Famille" >
