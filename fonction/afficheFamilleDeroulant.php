@@ -23,6 +23,7 @@ $racine = $_COOKIE["racine"] ;
 <?php
 while($donnees = $reponse->fetch() )
         {
+            $tableaux[$i]=print_r($donnees[$i]) ;
 //
 //  Ce souvient de la famille utiliser dernierement
 //    
@@ -43,5 +44,5 @@ while($donnees = $reponse->fetch() )
 </select>
 <?php
     }
-
+print_r($tableaux);
 ?>
