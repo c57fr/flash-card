@@ -33,7 +33,6 @@ while($donnees = $reponse->fetch() )
     ?> 
 <option value="<?php echo $donnees[$i] ; ?>"><?php echo $donnees[$i] ; ?></option>
     <?php
-            $tableaux[$i]=$donnees[$i] ;
             $i+1;
         }
 
@@ -43,5 +42,5 @@ while($donnees = $reponse->fetch() )
 </select>
 <?php
     }
-print_r($tableaux);
+
 ?>
