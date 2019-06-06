@@ -2,8 +2,8 @@
 
         function rechercheFmille($id)
         {
-                
-            include_once("http://192.168.1.27/flash-card/fonction/bdd.php") ;
+        
+            include_once("/var/www/html/flash-card/fonction/bdd.php") ;
         
             $req = $bdd->prepare('SELECT * FROM famille WHERE  famille= ? ) VALUES ( :famille ) ';
             
