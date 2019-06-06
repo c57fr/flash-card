@@ -13,10 +13,10 @@ if( @$_POST['question'] ) // si une carte est envoyer
     $Famille =$_POST["Famille"] ;
     $question =$_POST["question"] ;
     $reponse = $_POST["reponse"] ;
-/*
-    echo '<hr />'.$question ;
-    echo '<hr />'.$reponse ;
-*/
+    echo '<hr />carte'.$carte ;
+    echo '<hr />Famille'.$Famille ;
+    echo '<hr />question'.$question ;
+    echo '<hr />reponse'.$reponse ;
     
     
 include_once("$racine/Vue/head.html") ;
