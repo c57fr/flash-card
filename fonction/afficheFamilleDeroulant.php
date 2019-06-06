@@ -31,7 +31,7 @@ while($donnees = $reponse->fetch() )
     <?php }
 // FIN    
     ?> 
-<option value="<?php echo $donnees['famille'] ; ?>"><?php echo $donnees[$i] ; ?></option>
+<option value="<?php echo $donnees[5] ; ?>"><?php echo $donnees[5] ; ?></option>
     <?php
             $i+1;
         }
