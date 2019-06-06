@@ -27,11 +27,11 @@ while($donnees = $reponse->fetch() )
 //    
     if( @$_SESSION['famille']==$donnees[$i] )
     {?>
-        <option value="<?php echo $donnees[$i] ; ?>" selected><?php echo $donnees[$i] ; ?></option>
+        <option value="<?php echo $donnees['famille'] ; ?>" selected><?php echo $donnees[$i] ; ?></option>
     <?php }
 // FIN    
     ?> 
-<option value="<?php echo $donnees[$i] ; ?>"><?php echo $donnees[$i] ; ?></option>
+<option value="<?php echo $donnees['famille'] ; ?>"><?php echo $donnees[$i] ; ?></option>
     <?php
             $i+1;
         }
