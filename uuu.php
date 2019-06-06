@@ -11,6 +11,10 @@
             ));
             
             $donnees = $reponse->fetch() ;
+            return $donnees ;
 
         }
+$aaa = rechercheFmille(13);
+        echo '<hr />ok<hr />' ;
+        print_r($aaa) ;
 ?>
