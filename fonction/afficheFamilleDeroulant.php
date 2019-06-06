@@ -11,7 +11,6 @@ $racine = $_COOKIE["racine"] ;
         
         $donnees = $reponse->fetch() ;
         $i=0;
-        print_r($donnees) ;
 ?>
 
 <select name="Famille" >
@@ -23,7 +22,6 @@ $racine = $_COOKIE["racine"] ;
 <?php
 while($donnees = $reponse->fetch() )
         {
-            $tableaux[$i]=print_r($donnees[$i]) ;
 //
 //  Ce souvient de la famille utiliser dernierement
 //    
@@ -35,6 +33,7 @@ while($donnees = $reponse->fetch() )
     ?> 
 <option value="<?php echo $donnees[$i] ; ?>"><?php echo $donnees[$i] ; ?></option>
     <?php
+            $tableaux[$i]=$donnees[$i] ;
             $i+1;
         }
 
