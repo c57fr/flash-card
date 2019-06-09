@@ -9,10 +9,10 @@
 $stmt = $dbh->prepare("SELECT * FROM famille where famille = ?");
 
 $stmt->execute(array( $id )) ;
-
-$row = $stmt->fetch() ;
+/*
+$row = $stmt->fetch()
     print_r($row);
-
+*/
         }
 
 //              $aaa = rechercheFmille(13);
