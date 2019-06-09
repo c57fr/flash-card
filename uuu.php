@@ -1,5 +1,5 @@
 < > <?php
-        function rechercheFmille($id)
+        function rechercheFamille($id)
         {
 
             include_once("/var/www/html/flash-card/fonction/bdd.php") ;
