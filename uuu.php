@@ -3,12 +3,12 @@
 
             include_once("/var/www/html/flash-card/fonction/bdd.php") ;
         
-            $req = $bdd->prepare('SELECT * FROM famille ') ;
+            $req = $bdd->query('SELECT * FROM famille ') ;
             
          
- while ( $donnees = $reponse->fetch()  ) {
+ while ( $donnees = $req->fetch()  ) {
         print_r( $donnees ) ;
-        
+
             }
 
 
