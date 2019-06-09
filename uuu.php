@@ -1,4 +1,33 @@
-< > <?php
+<pre> 
+    <?php
+
+            include_once("/var/www/html/flash-card/fonction/bdd.php") ;
+        
+            $req = $bdd->prepare('SELECT * FROM famille ') ;
+            
+         
+ while ( $donnees = $reponse->fetch()  ) {
+        print_r( $donnees ) ;
+        
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+< ?php
         function rechercheFamille($id)
         {
 
