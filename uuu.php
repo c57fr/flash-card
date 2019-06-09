@@ -7,15 +7,16 @@
 
 
 $stmt = $dbh->prepare("SELECT * FROM famille where famille = ?");
+/*
 
 $stmt->execute(array( $id ))
-/*
+
 $row = $stmt->fetch()
     print_r($row);
 */
         }
 
 //              $aaa = rechercheFmille(13);
-        echo '<hr />oki doki <hr />' ;
+        echo '<hr />ok<hr />' ;
 //        print_r($aaa) ;
 ?>
