@@ -4,16 +4,16 @@
 
             include_once("/var/www/html/flash-card/fonction/bdd.php") ;
         
-            $req = $bdd->prepare('SELECT * FROM famille WHERE  famille= famille ) VALUES ( :famille ) ';
+            $req = $bdd->prepare('SELECT * FROM famille WHERE  famille= ? ) VALUES ( :famille ) ';
             
             $req->execute(array(
             'famille' => $id 
             ));
             
-            $donnees = $req->fetch() ;
+            $donnees = $reponse->fetch() ;
             return $donnees ;
 
-        }
+        };
 
 //              $aaa = rechercheFmille(13);
         echo '<hr />ok<hr />' ;
