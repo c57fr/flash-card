@@ -2,9 +2,20 @@
 <hr />
 <section id='affichageFamille'>
     <article>
-        <?php
-            echo $carte['famille']  ;
-        ?>
+<?php 
+
+    $racine = $_COOKIE["racine"] ;
+
+    include_once("$racine/fonction/bdd.php") ;
+        
+    $req = $bdd->prepare('SELECT * FROM famille WHERE famille=?') ;
+    $req -> execute(array(  $carte['famille']  ))   ;
+
+    $donnees = $req->fetch()    ;
+
+    echo $donnees['name'] ;
+
+?>
     </article>
 </section>
     <hr />

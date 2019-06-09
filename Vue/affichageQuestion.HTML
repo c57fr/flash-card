@@ -2,20 +2,20 @@
 <hr />
 <section>
     <article id="affichageFamille">
-        <?php
+<?php 
 
-    function:afficheFamilleUtiliser($id)
-    {
-    	include_once("/var/www/html/flash-card/fonction/bdd.php") ;
+    $racine = $_COOKIE["racine"] ;
+
+    include_once("$racine/fonction/bdd.php") ;
         
-		$req = $bdd->prepare('SELECT * FROM famille WHERE famille=?') ;
-		$req -> execute(array($id))	;
-		$donnees = $req->fetch()	;
-		return $donnees['name'] ;
-    }
-        $nomFamille = afficheFamilleUtiliser(	$carte['famille']	)	;
-            echo   '<hr /><h2>'.$nomFamille.'</h2>'	;
-        ?>
+    $req = $bdd->prepare('SELECT * FROM famille WHERE famille=?') ;
+    $req -> execute(array(  $carte['famille']  ))   ;
+
+    $donnees = $req->fetch()    ;
+
+    echo $donnees['name'] ;
+
+?>
     </article>
     <hr />
     <article id="FlashCards">
