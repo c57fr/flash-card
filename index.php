@@ -2,7 +2,6 @@
 include_once("fonction/racine.php") ;
 
 $_SESSION['site'] = $_COOKIE["serveur"] ;
-$racine = $_COOKIE["racine"] ;
 
 
 

@@ -3,7 +3,7 @@
     2.Mise en memoire cookie , session
     3.affichage de TOUT les liens dans le menu
     4.affichage d'une jolie image de font
-    5.teste si un cookie existe deja , si oui l'actualiser + actualiser la session
+    5.a chaque chargement sur l'acceuil actualiser les cookies + actualiser la session
 
 #               CRÉATION D'UNE FLASH-CARD
 ##      I-Affichage    
@@ -41,13 +41,16 @@
 
 #       UTILISER UNE CARTE
     1.recherche toutes les cartes qui :
-        *.non pas le statue 0
+        *.non pas le niveau 0
         *.on une date de vue inférieur a la date du jour
         *.
         *.
         *.
     2.l'affichage et en javascript et html
-    3.
+    3.Sélectionne 15 Id aleatoirement
+    4.place dans une bibliotheque
+    5.a chaque utilisation efface une des entree de la bibliotheque
+    6.Envoie au site l'id + si juste ou si faux
 
 #       INSTALLER LA TABLE
     1.utiliser un fichier install.php

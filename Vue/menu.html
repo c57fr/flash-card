@@ -1,15 +1,27 @@
-<nav>
+<?php
+$ite = $_COOKIE["serveur"] ;
 
-    <a href="http://<?php echo $_SESSION['site'] ; ?>/controleur/affichageFlashCard.php">Afficher une Flash-Card</a>
+?><nav>
+
+    <a href="<?php echo $ite ; ?>">Acceuil</a>
+    
+    <br />
+    <a href="<?php echo $ite ; ?>/controleur/affichageFlashCard.php">Afficher une Flash-Card</a>
     
     <br />
     
-    <a href="http://<?php echo $_SESSION['site'] ; ?>/controleur/creationFlashCards.php">Créer une Flash-Card</a>
+    <a href="<?php echo $ite ; ?>/controleur/creationFlashCards.php">Créer une Flash-Card</a>
     
     <br />
     
-    <a href="http://<?php echo $_SESSION['site'] ; ?>/controleur/creationFamille.php">Créer une famille</a>
+    <a href="<?php echo $ite ; ?>/controleur/creationFamille.php">Créer une famille</a>
     <br />
     
-    <a href="http://<?php echo $_SESSION['site'] ; ?>/controleur/install.php">Création Des Tables</a>
+    <a href="<?php echo $ite ; ?>/controleur/install.php">Création Des Tables</a>
+    <br />
+    
+    <a href="<?php echo $ite ; ?>/uuu/a.php">teste : ___a___    </a>
+    <br />
+    
+    <a href="<?php echo $ite ; ?>/controleur/install.php">Création Des Tables</a>
 </nav>
