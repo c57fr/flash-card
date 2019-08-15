@@ -1,6 +1,6 @@
 <?php
 
-$ite = $_COOKIE["serveur"] ;
+$_SESSION['site'] = $_COOKIE["serveur"] ;
 $racine = $_COOKIE["racine"] ;
 
 

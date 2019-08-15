@@ -1,11 +1,14 @@
 <?php
 include_once("fonction/racine.php") ;
 
-$ite = $_COOKIE["serveur"] ;
+$_SESSION['site'] = $_COOKIE["serveur"] ;
 $racine = $_COOKIE["racine"] ;
 
 
+
 include_once("Vue/head.html") ;
+$_SESSION['site'] ;
+$_SESSION['racine'] ;
 include_once("Vue/menu.html") ;
 include_once("Vue/footer.html") ;
 
