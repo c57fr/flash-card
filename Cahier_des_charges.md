@@ -1,10 +1,11 @@
-###            A L'ARRIVER SUR LE SITE
-    1.  Recherche du chemin absolu du site
-    2.  Mise en memoire cookie , session
-    3.  affichage de TOUT les liens dans le menu
-    4.  affichage d'une jolie image de font
+#              A L'ARRIVER SUR LE SITE
+    1. Recherche du chemin absolu du site
+    2.Mise en memoire cookie , session
+    3.affichage de TOUT les liens dans le menu
+    4.affichage d'une jolie image de font
+    5.teste si un cookie existe deja , si oui l'actualiser + actualiser la session
 
-###             CRÉATION D'UNE FLASH-CARD
+#               CRÉATION D'UNE FLASH-CARD
 ##      I-Affichage    
     1.Affichage d'un menu déroulant de toute les familles
     2.Affichage de deux textarea 
@@ -21,8 +22,13 @@
         *.Désactive les balises spéciale
         *.Qu'il n'existe pas déja
     4.affichage des textarea vides
+##      II-Entegistrement de la flash-card
+    1.l'ID est automatique
+    2.c'est l'ID de la famille et non le nom de la famille enregistrer
+    3.La date de vue est du jour
+    4.
 
-##      III.CRÉATION D'UNE FAMILLE
+#       CRÉATION D'UNE FAMILLE
     1.affichage D'un formulaire
     2.affichage d'un boutton
     3.envoie en javascript
@@ -31,3 +37,18 @@
     6.Les testes de sécurité :
         *.Qu'il n'y a bien pas moin de 3 caractéres ou pas plus de 35 caractéres 
         *.Désactive les balises spéciale
+        *.Qu'il n'existe pas déja
+
+#       UTILISER UNE CARTE
+    1.recherche toutes les cartes qui :
+        *.non pas le statue 0
+        *.on une date de vue inférieur a la date du jour
+        *.
+        *.
+        *.
+    2.l'affichage et en javascript et html
+    3.
+
+#       INSTALLER LA TABLE
+    1.utiliser un fichier install.php
+    2.
