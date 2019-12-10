@@ -1,15 +1,12 @@
-<?php 
-session_start();
-$_SESSION['site']= 'http://'.$_SERVER["SERVER_NAME"].'/flash-card' ;
-$_SESSION['racine']= $_SERVER["DOCUMENT_ROOT"].'/flash-card' ; 
-?>
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Flash - Card</title>
+  <link rel="gif" href="http://jlb/flash-card/Vue/img/engrenage.gif"  height=15px  />
+  <link rel="icon" href="favicon.gif">
+  <title>Flash - Card V7 </title>
   <link rel="stylesheet" href="http://<?php echo $_SESSION['site'] ; ?>/Vue/style.css">
 </head>
 <body>
 <div id="corp">
+    <img src='Vue/img/engrenage.gif' height= 50px >
