@@ -16,9 +16,22 @@ switch( @$section = $_GET['section'] )
         echo '<hr>'.$section.'<hr>' ; //Efface-moi
     break ;
 
-    case 'creationFamille':
+    case 'installation':
         echo '<hr>'.$section.'<hr>' ; //Efface-moi
-        require_once('controleur/creationFamille.php');
+        require_once('controleur/install.php');
+    break ;
+
+    case 'creationFamille':
+        if( $_GET['famille'] )
+        {
+            require_once('fonction/traitementFamille.php');
+        }
+        else{
+            require_once('controleur/creationFamille.php');
+        }
+        echo '<hr>' ;
+//        require_once('controleur/uuu.js');
+//        echo '< script type="text/javascript" src="controleur/uuu.js"></>	' ;
     break ;
 
     default :

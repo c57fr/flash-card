@@ -2,13 +2,15 @@
 
 include_once("$racine/fonction/bdd.php");
 
-
-$creationFamille = "CREATE TABLE IF NOT EXISTS famille (
+$creationBase=<<<CREATION
+CREATE BASE flashCard  ;
+CREATION ;
+ 
+$creationFamille =<<<CREATION "CREATE TABLE IF NOT EXISTS famille (
 famille SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name TEXT(550) NOT NULL
 ) " ;
- 
-
+CREATION ;
 $creationCards = "CREATE TABLE IF NOT EXISTS cards (
 ID SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 question TEXT(550) NOT NULL ,
@@ -19,6 +21,7 @@ dateDeVue DATE NOT NULL
 ) " ;
 
 
+$count = $bdd->exec($creationBase);
 $count = $bdd->exec($creationFamille);
 $count = $bdd->exec($creationCards);
 
