@@ -3,7 +3,7 @@ include_once("fonction/racine.php") ;
 include_once("$racine/Vue/head.html") ;
 require_once("$racine/fonction/bdd.php");
 include_once("$racine/Vue/menu.html") ;
-
+// $_SESSION['erreur'] = 0 ; // Défini quel message d'erreur doit etre afficher
 // Affichage d'une légende pour l'estetique
 function legende($var)
 {
