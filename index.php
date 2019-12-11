@@ -4,9 +4,16 @@ include_once("$racine/Vue/head.html") ;
 require_once("$racine/fonction/bdd.php");
 include_once("$racine/Vue/menu.html") ;
 
-//
-//
-//
+// Affichage d'une légende pour l'estetique
+function legende($var)
+{
+    $affichage= <<<aff
+<fieldset>
+    <legend>$var</legend>
+aff ;
+    echo $affichage ;
+}
+
 switch( @$ection = $_GET['section'] )
 {
 //**********************************************************************************************************
@@ -24,23 +31,10 @@ switch( @$ection = $_GET['section'] )
     break ;
 
 //**********************************************************************************************************
-//          Installation des tables
-//*********************************************************************************************************
-    case 'installation':
-$affichage= <<<aff
-<fieldset>
-    <legend>ection d'installation des tables'</legend>
-aff ;
-        echo $affichage ; //Efface-moi
-        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
-            require_once('controleur/install.php');
-        echo '</fieldset>'."\n<br>" ; //Efface-moi
-    break ;
-
-//**********************************************************************************************************
-//          Creation d'une Famille'
+//          Creation d'une Famille
 //*********************************************************************************************************
     case 'creationFamille':
+        legende('Creation d\'une Famille') ;
         if( $_GET['famille'] )
         {
             require_once('fonction/traitementFamille.php');
@@ -54,6 +48,17 @@ aff ;
     break ;
 
 //**********************************************************************************************************
+//          Installation des tables
+//*********************************************************************************************************
+case 'installation':
+    
+            legende( 'Installation des tables' ) ;// Affichage estetique
+            echo $ref ; //Efface-moi
+            echo '<hr>'.$ection.'<hr>' ; //Efface-moi
+            require_once('controleur/install.php');
+        break ;
+    
+//**********************************************************************************************************
 //          Action par défaut
 //*********************************************************************************************************
     default :
@@ -63,6 +68,7 @@ aff ;
 //          Fin
 //*********************************************************************************************************
 }
+echo '</fieldset>'."\n<br>" ;// Affichage estetique
 
 $_SESSION['site'] = $_COOKIE["serveur"] ; //Efface-moi
 $racine = $_COOKIE["racine"] ; //Efface-moi
