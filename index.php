@@ -1,7 +1,8 @@
 <?php
 include_once("fonction/racine.php") ;
-include_once("Vue/head.html") ;
-include_once("Vue/menu.html") ;
+include_once("$racine/Vue/head.html") ;
+require_once("$racine/fonction/bdd.php");
+include_once("$racine/Vue/menu.html") ;
 
 //
 //
