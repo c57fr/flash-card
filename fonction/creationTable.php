@@ -7,14 +7,14 @@ if($bdd->connect_error){
 }
 echo 'Connexion réussie'."<br>\n";
 
-$creationFamille =<<<EOT
+$creationFamille =<<<'EOT'
 CREATE TABLE IF NOT EXISTS famille (
 famille TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 name TEXT(500) NOT NULL
 ) ;
 EOT ;
 
-$creationCards =<<<CREATION
+$creationCards =<<<'CREATION'
 CREATE TABLE IF NOT EXISTS cards (
 ID SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 question TEXT(550) NOT NULL ,
