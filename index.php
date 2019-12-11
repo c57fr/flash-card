@@ -6,19 +6,25 @@ include_once("Vue/menu.html") ;
 //
 //
 //
-switch( @$section = $_GET['section'] )
+switch( @$ection = $_GET['section'] )
 {
     case 'affichageFlashCard':
-        echo '<hr>'.$section.'<hr>' ; //Efface-moi
+        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
     break ;
 
     case 'creationFlashCards':
-        echo '<hr>'.$section.'<hr>' ; //Efface-moi
+        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
     break ;
 
     case 'installation':
-        echo '<hr>'.$section.'<hr>' ; //Efface-moi
-        require_once('controleur/install.php');
+$affichage= <<<aff
+<fieldset>
+    <legend>ection d'installation des tables'</legend>
+aff ;
+        echo $affichage ; //Efface-moi
+        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
+            require_once('controleur/install.php');
+        echo '</fieldset>'."\n<br>" ; //Efface-moi
     break ;
 
     case 'creationFamille':
