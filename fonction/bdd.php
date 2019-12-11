@@ -9,7 +9,7 @@ $baseDeDonnee = 'flashCard';
 //  $bdd = new PDO("mysql:host=$servername;dbname=$baseDeDonnee", $username, $password); // Version objet
 
 
-$link = mysqli_connect( $servername , $username , $password , $baseDeDonnee );// Version procédural 
+$bdd = mysqli_connect( $servername , $username , $password , $baseDeDonnee );// Version procédural 
 
 /* Vérification de la connexion */
 if ($mysqli->connect_errno) {

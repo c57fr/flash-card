@@ -39,10 +39,10 @@ Erreur."\n" ;
 Erreur."\n" ;
         break;
 
-    case ' _________ ':
+    case ' 5 ':
         $messageErreur =<<<'Erreur'
-        ____________________________________<br>
-        Code d'Erreur[ _________ ]
+        Echec de la requete SQL <br>
+        Code d'Erreur[ 5 ]
 Erreur."\n" ;
         break;
 
