@@ -3,11 +3,16 @@ session_start();
 include_once("../fonction/racine.php") ;
 include_once("$racine/Vue/head.html") ;
 require_once("$racine/fonction/bdd.php");
+echo '<h1>racine p1 = '.$racine.'</h1> '; //Efface-moi
 require_once("$racine/fonction/objets/objetCard.php");
-//  include_once("$racine/fonction/erreur.php");// Efface-moi
 
-$famille = new card( $_GET[ 'famille' ] ) ;
 
+$question= $_POST[ 'question' ] ;
+$reponse= $_POST[ 'reponse' ] ;
+$famille = new card( $bdd , $question , $reponse ) ;
+
+echo '<h1>question = '.$question.'</h1> <pre> '."\n"; //Efface-moi
+//  print_r($bdd) ;
 ?>
 
 <div >
