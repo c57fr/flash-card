@@ -8,17 +8,20 @@ $famille = card::affMenuDeroulant( $bdd ) ;
 
 <select id="famille" name="famille" required>
     <option value="">--Veuillez sélectionner une famille--</option>
-    <?php
-    if( $_SESSION['familleDefau'] )
-    {
-        
-    }
-    ?>
+    
 <?php
     foreach ($famille as $key => $value) {
-        $var= <<<EOT
-          <option value='$value[famille]'>$value[name]</option>
-EOT ;
+        if( $_SESSION['familleDefaut']-1 == $key )//Se souvient du dernier selectionner et le nome selected
+        {
+            $selected= 'selected';
+        }
+        else {
+            $selected = '' ;
+        }
+
+        $var= <<<menueDeroulant
+          <option value='$value[famille]' $selected >$value[name]</option>
+menueDeroulant ;
         echo $var."\n" ;
     }
 ?>

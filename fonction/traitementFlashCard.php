@@ -7,10 +7,11 @@ echo '<h1>racine p1 = '.$racine.'</h1> '; //Efface-moi
 require_once("$racine/fonction/objets/objetCard.php");
 
 
+$_SESSION['familleDefaut'] = $famille = $_POST[ 'famille' ] ;
 $question= $_POST[ 'question' ] ;
 $reponse= $_POST[ 'reponse' ] ;
-$famille = new card( $bdd , $question , $reponse ) ;
-
+$famille = new card( $bdd , $question , $reponse, $famille ) ;
+$famille -> enregistrecards() ;
 echo '<h1>question = '.$question.'</h1> <pre> '."\n"; //Efface-moi
 //  print_r($bdd) ;
 ?>

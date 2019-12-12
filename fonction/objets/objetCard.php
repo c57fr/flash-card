@@ -2,6 +2,7 @@
 
 class card
 {
+    private $famille ;
     private $question ;
     private $reponse ;
     private $bdd ;
@@ -9,21 +10,23 @@ class card
 //          constructteur
 //*********************************************************************************************************
 
-    public function __construct( $bdd , $question , $reponse )
+    public function __construct( $bdd , $question , $reponse  , $famille )
     {
         $this->bdd = $bdd ;
-        $this->securiter( $question , $reponse );
+        $this->securiter( $question , $reponse , $famille);
     }
 //**********************************************************************************************************
 //          htmlspecialchars
 //*********************************************************************************************************
 
-private function securiter( $question , $reponse ): void
+private function securiter( $question , $reponse , $famille ): void
 {
     $question = htmlentities( $question ) ;
     $reponse = htmlentities( $reponse ) ;
+    $famille = (int)$famille ;
     $this-> question = $question ;
     $this-> reponse = $reponse ;
+    $this-> famille = $famille ;
 }
 //**********************************************************************************************************
 //          affiche les familles dans le menu déroulant
@@ -36,24 +39,22 @@ public static function affMenuDeroulant( $bdd )
     mysqli_free_result ( $requete ) ;//Libération de la memoire 
     
     foreach ($reussi as $key => $value) {
-//        echo $key.'<h1>value = '.$value['name'].'</h1> <pre> '."\n"; //Efface-moi
         $resultat[]= $value ;
     }
     return $reussi ;
-
-    
+//        echo $key.'<h1>value = '.$value['name'].'</h1> <pre> '."\n"; //Efface-moi
 }
 //**********************************************************************************************************
     //          enregistrecards
 //*********************************************************************************************************
 
-public function enregistrecards(  ): bool
+public function enregistrecards(): bool
 {
     $requete = <<<INSERT_INTO
-    INSERT INTO `flashCard`.`cards` (`question` , `reponse`) VALUES ('$this->question' , '$this->reponse');
+    INSERT INTO `flashCard`.`cards` (`question` , `reponse` , `famille`  , `dateDeVue` ) VALUES ('$this->question' , '$this->reponse' , '$this->famille' , NOW() );
 INSERT_INTO ;//Construction de la requête 
 
-//        echo '<h1>requete = '.$requete.'</h1> '; //Efface-moi
+        echo '<h1>requete = '.$requete.'</h1> '; //Efface-moi
 
     $reussi = mysqli_query (  $this->bdd ,  $requete ) ;// Execution de la requête 
     
@@ -64,6 +65,7 @@ INSERT_INTO ;//Construction de la requête
         exit();
     }
     return $reussi ;
+//  $bdd , $question , $reponse, $famille
 }
 
 
