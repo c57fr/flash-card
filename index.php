@@ -28,6 +28,8 @@ switch( @$ection = $_GET['section'] )
 //*********************************************************************************************************
     case 'creationFlashCards':
         echo '<hr>'.$ection.'<hr>' ; //Efface-moi
+        legende('Creation d\'une Flash-Card') ;
+        require_once('controleur/creationFlashCards.php');
     break ;
 
 //**********************************************************************************************************
@@ -35,28 +37,19 @@ switch( @$ection = $_GET['section'] )
 //*********************************************************************************************************
     case 'creationFamille':
         legende('Creation d\'une Famille') ;
-        if( $_GET['famille'] )
-        {
-            require_once('fonction/traitementFamille.php');
-        }
-        else{
-            require_once('controleur/creationFamille.php');
-        }
-        echo '<hr>' ;
-//        require_once('controleur/uuu.js');
-//        echo '< script type="text/javascript" src="controleur/uuu.js"></>	' ;
+        require_once('controleur/creationFamille.php');
     break ;
 
 //**********************************************************************************************************
 //          Installation des tables
 //*********************************************************************************************************
-case 'installation':
-    
-            legende( 'Installation des tables' ) ;// Affichage estetique
+    case 'installation':
+        legende( 'Installation des tables' ) ;// Affichage estetique
             echo $ref ; //Efface-moi
-            echo '<hr>'.$ection.'<hr>' ; //Efface-moi
+            echo '<h1>ection = '.$ection.'</h1> '; //Efface-moi
             require_once('controleur/install.php');
-        break ;
+        
+    break ;
     
 //**********************************************************************************************************
 //          Action par défaut
