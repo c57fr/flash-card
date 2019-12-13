@@ -54,8 +54,6 @@ public function enregistrecards(): bool
     INSERT INTO `flashCard`.`cards` (`question` , `reponse` , `famille`  , `dateDeVue` ) VALUES ('$this->question' , '$this->reponse' , '$this->famille' , NOW() );
 INSERT_INTO ;//Construction de la requête 
 
-        echo '<h1>requete = '.$requete.'</h1> '; //Efface-moi
-
     $reussi = mysqli_query (  $this->bdd ,  $requete ) ;// Execution de la requête 
     
     if( !$reussi )//Si il y a une erreur de communication avec la bdd
@@ -64,7 +62,9 @@ INSERT_INTO ;//Construction de la requête
         include_once( $_SESSION['racine']."/fonction/erreur.php");
         exit();
     }
-    return $reussi ;
+    $requete=$reussi ;
+    mysqli_free_result ( $reussi ) ;//Libération de la memoire 
+    return $requete ;
 //  $bdd , $question , $reponse, $famille
 }
 
