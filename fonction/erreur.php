@@ -46,10 +46,10 @@ Erreur."\n" ;
 Erreur."\n" ;
         break;
 
-    case ' _________ ':
+    case ' 6 ':
         $messageErreur =<<<'Erreur'
-        ____________________________________<br>
-        Code d'Erreur[ _________ ]
+        Félicitation toutes les cartes du jour on été testé !<br>
+        Code d'Erreur[ 6 ]
 Erreur."\n" ;
         break;
 

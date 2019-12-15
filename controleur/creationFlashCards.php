@@ -1,5 +1,5 @@
 <?php
-require_once("$racine/fonction/objets/objetCard.php");
+require_once("$racine/fonction/objets/constructCard.php");
 $famille = card::affMenuDeroulant( $bdd ) ;
 //echo  '<h1>racine = '.$racine.'</h1> <pre> '."\n"; //Efface-moi
 ?>

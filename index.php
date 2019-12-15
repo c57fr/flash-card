@@ -13,21 +13,23 @@ function legende($var)
 aff ;
     echo $affichage ;
 }
-
-switch( @$ection = $_GET['section'] )
+$ection = htmlspecialchars(  $_GET['section'] ) ;
+switch( $ection )
 {
 //**********************************************************************************************************
 //          Affichage de la FlashCard
 //*********************************************************************************************************    
     case 'affichageFlashCard':
-        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
+        legende('Affiché une Flash-Card') ;
+        echo '<h1>section = '.$ection.'</h1> '; //Efface-moi
+        include_once("$racine/controleur/affichageFlashCard.php") ;
     break ;
 
 //**********************************************************************************************************
 //          Creation de la FlashCard
 //*********************************************************************************************************
     case 'creationFlashCards':
-        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
+//        echo '<hr>'.$ection.'<hr>' ; //Efface-moi
         legende('Creation d\'une Flash-Card') ;
         require_once('controleur/creationFlashCards.php');
     break ;
@@ -67,12 +69,14 @@ $_SESSION['site'] = $_COOKIE["serveur"] ; //Efface-moi
 $racine = $_COOKIE["racine"] ; //Efface-moi
 
 
-
+?>
+<!--
 $_SESSION['site'] ; //Efface-moi
 $_SESSION['racine'] ; //Efface-moi
 
 echo  $_SESSION['site'].'<br>' ; //Efface-moi
 echo  $_COOKIE["serveur"] ; //Efface-moi
-
+-->
+<?php
 include_once("Vue/footer.html") ;
 ?>
