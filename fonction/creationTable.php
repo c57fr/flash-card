@@ -25,6 +25,6 @@ dateDeVue DATE NOT NULL
 ) ;
 CREATION ;
 
-$count = $bdd->exec($creationFamille);
-$count = $bdd->exec($creationCards);
+$count = $bdd->query($creationFamille);
+$count = $bdd->query($creationCards);
 ?>

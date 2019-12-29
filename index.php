@@ -47,7 +47,7 @@ switch( $ection )
 //*********************************************************************************************************
     case 'installation':
         legende( 'Installation des tables' ) ;// Affichage estetique
-            echo $ref ; //Efface-moi
+//            echo $ref ; //Efface-moi
             echo '<h1>ection = '.$ection.'</h1> '; //Efface-moi
             require_once('controleur/install.php');
         
