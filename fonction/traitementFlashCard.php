@@ -1,5 +1,5 @@
 <?php
-session_start();
+//  session_start();
 include_once("../fonction/racine.php") ;
 include_once("$racine/Vue/head.html") ;
 require_once("$racine/fonction/bdd.php");
@@ -29,7 +29,7 @@ $famille -> enregistrecards() ;
 
 
 
-include_once("Vue/footer.html") ;
+include_once("$racine/Vue/footer.html") ;
 
 ?>
 </div>

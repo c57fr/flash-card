@@ -36,7 +36,7 @@ public static function affMenuDeroulant( $bdd )
 {
     $requete = "SELECT * FROM famille " ;//Construction de la requête     
     $reussi = mysqli_query (  $bdd ,  $requete ) ;// Execution de la requête 
-    mysqli_free_result ( $requete ) ;//Libération de la memoire 
+    //  mysqli_free_result ( $requete ) ;//Libération de la memoire  ( marche pas )
     
     foreach ($reussi as $key => $value) {
         $resultat[]= $value ;
@@ -63,7 +63,7 @@ INSERT_INTO ;//Construction de la requête
         exit();
     }
     $requete=$reussi ;
-    mysqli_free_result ( $reussi ) ;//Libération de la memoire 
+    //  mysqli_free_result ( $reussi ) ;//Libération de la memoire ne fonctionne pas
     return $requete ;
 //  $bdd , $question , $reponse, $famille
 }
