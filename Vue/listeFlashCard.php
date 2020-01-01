@@ -22,7 +22,8 @@
             document.getElementById( 'carte_'+i ).style.display = "block" ;
         }
         else{
-            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
+            window.location.reload() ;
+//            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
         }
     }
 </script>
