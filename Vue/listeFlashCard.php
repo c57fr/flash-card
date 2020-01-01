@@ -13,10 +13,17 @@
     var i = 0 ;
     function affMasqueFlashCard()
     {
-//        alert( 'flashCard_'+i );
-        document.getElementById( 'carte_'+i ).style.display = "none" ;
-        i++ ;
-        document.getElementById( 'carte_'+i ).style.display = "block" ;
+
+            if ( document.getElementById(  'carte_'+i  ) )
+            {
+    //        alert( 'flashCard_'+i );
+            document.getElementById( 'carte_'+i ).style.display = "none" ;
+            i++ ;
+            document.getElementById( 'carte_'+i ).style.display = "block" ;
+        }
+        else{
+            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
+        }
     }
 </script>
 
