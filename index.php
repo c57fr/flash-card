@@ -13,7 +13,7 @@ function legende($var)
 aff ;
     echo $affichage ;
 }
-$ection = htmlspecialchars(  $_GET['section'] ) ;
+@$ection = htmlspecialchars(  $_GET['section'] ) ;
 switch( $ection )
 {
 //**********************************************************************************************************
@@ -21,7 +21,7 @@ switch( $ection )
 //*********************************************************************************************************    
     case 'affichageFlashCard':
         legende('Affiché une Flash-Card') ;
-        echo '<h1>section = '.$ection.'</h1> '; //Efface-moi
+//        echo '<h1>section = '.$ection.'</h1>'; //Efface-moi
         include_once("$racine/controleur/affichageFlashCard.php") ;
     break ;
 

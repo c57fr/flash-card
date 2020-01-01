@@ -3,6 +3,7 @@
 class affCard
 {
     private $bdd ;
+    private $resultat ;
 //**********************************************************************************************************
 //          constructteur
 //*********************************************************************************************************
@@ -20,10 +21,17 @@ public function reqSelct()
 {
     $bdd = $this->bdd  ;
 
-    $requete = "SELECT * FROM cards WHERE dateDeVue <= NOW() AND  niveau != 0 LIMIT 1" ;//Construction de la requête     
+    $requete = "SELECT * FROM cards WHERE dateDeVue <= NOW() AND  niveau != 0 LIMIT 15" ;//Construction de la requête     
     $reussi = mysqli_query (  $bdd ,  $requete ) ;// Execution de la requête 
+    
+    foreach ($reussi as $key => $table) {
+        $flashcard[] = $table ;
+    }
+    $this->flashcard = $reussi  ;
+    
+//    print_r( $flashcard ) ; //EFFACE-MOI
 
-    mysqli_free_result ( $requete ) ;//Libération de la memoire 
+    //  mysqli_free_result ( $requete ) ;//Libération de la memoire ( ne marche plus )
 
     foreach ($reussi as $value) {
 //        $resultat[]= $value ;
@@ -38,11 +46,11 @@ public function reqSelct()
         exit();
     }    
 
-    print_r( $value ) ; //Efface-moi
+//    print_r( $value ) ; //Efface-moi
     return $reussi ;
 
-    echo '<pre>' ; //Efface-moi
-    print_r( $resultat ) ; //Efface-moi
+//    echo '<pre>' ; //Efface-moi
+//    print_r( $resultat ) ; //Efface-moi
     return $reussi ;
 
 

@@ -1,4 +1,4 @@
-body
+
 {
     background-color: black;
     color: blanchedalmond;    
@@ -6,4 +6,9 @@ body
 a
 {
     color: blue;
+}
+#carte_1
+{
+    display: none ;
+
 }
