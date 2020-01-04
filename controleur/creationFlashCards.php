@@ -30,8 +30,8 @@ menueDeroulant ;
 
     <input type="reset" id='Reset' value="Reset">
     <br>
-    <textarea name='question'placeholder="Placer votre question ici" spellcheck='false'  minlength=3 maxlength=250 required autofocus>bleurg</textarea>
-    <textarea name='reponse' placeholder="Placer votre réponse ici"  spellcheck='false'   minlength=3 maxlength=250 required >bleurg</textarea>
+    <textarea name='question'placeholder="Placer votre question ici" spellcheck='false'  minlength=3 maxlength=250 required autofocus></textarea>
+    <textarea name='reponse' placeholder="Placer votre réponse ici"  spellcheck='false'   minlength=3 maxlength=250 required ></textarea>
 
     <input type="submit" value="Envoyer">
 

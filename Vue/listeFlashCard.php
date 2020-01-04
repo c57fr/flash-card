@@ -38,10 +38,12 @@ foreach ($listeFlashCard as $key => $table) {
 //    print_r( $table ) ;
 ?>
 
-<form method='POST' action target='_blank'   class='masquer' id='carte_<?= $i ?>'>
+<form method='get' action='http://<?= $ite ?>/fonction/majFlashCard.php' target='_blank'   class='masquer' id='carte_<?= $i ?>'>
 
+    <input type='text' name='id' value=' <?= $table['ID'] ?> ' >
     <input type='hidden' name='id' value=' <?= $table['ID'] ?> ' >
     <input type='hidden' name='niveau' value=' <?= $table['niveau'] ?> ' >
+    <input type='texte' name='uuu' value=' bleurg' >
 
     <section >
         <h2>ID = <?= $table['ID'] ?> </h2>
@@ -63,8 +65,8 @@ foreach ($listeFlashCard as $key => $table) {
                 <?= $table['reponse'] ?>
             </fieldset>  
 
-            <input type="submit" name='reponse' value='juste' >
-            <input type="submit" name='reponse' value='faux' >
+            <input type="submit" name='validation' value='juste' >
+            <input type="submit" name='validation' value='faux' >
         </article>
         
     </section>

@@ -3,37 +3,12 @@
   <title>getElementById example</title>
 </head>
 <body>
-    <style>
-    #mysterieux
-    {
-        display: none ;
-    }
-    </style>
-    <script>
-function changeColor(newColor) {
-    var elem = document.getElementById('para');
-    elem.style.color = newColor;
-}
-
-function affMasqueFlashCard( var ) {
-//    var  variable ;
-if ( !onOff ) {
-    var onOff = true ;
-}
-    document.getElementById( var ).style.display = 'block';
-    
-}
+    <script language="javascript">
+        var obj_window = window.open('', '_self');
+        obj_window.opener = window;
+        obj_window.focus();
+        opener=self;
+        self.close();
     </script>
-
-
-  <p id="1">Some text here</p>
-
-  <p id='mysterieux' >Ce texte n'est pas visible par défaut</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-  <button onclick="changeColor('red');">red</button>
-  <hr>
-  <button value='affiche le texte' onclick="affTexte();">red</button>
-
 </body>
 </html>

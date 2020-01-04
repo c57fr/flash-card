@@ -53,10 +53,10 @@ Erreur."\n" ;
 Erreur."\n" ;
         break;
 
-    case ' _________ ':
+    case ' 7 ':
         $messageErreur =<<<'Erreur'
-        ____________________________________<br>
-        Code d'Erreur[ _________ ]
+        Cette flash-card a déja été validé<br>
+        Code d'Erreur[ 7 ]
 Erreur."\n" ;
         break;
 

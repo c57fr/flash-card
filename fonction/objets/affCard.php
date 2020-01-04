@@ -40,7 +40,7 @@ public function reqSelct()
     }
 
     //Si aucune carte a affiché alors toute les cartes disponibles on été vue
-    if ( !$value ) {
+    if ( @!$value ) {
         $_SESSION['erreur']=6;
         include_once( $_SESSION['racine']."/fonction/erreur.php");
         exit();
