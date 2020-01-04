@@ -40,14 +40,10 @@ foreach ($listeFlashCard as $key => $table) {
 
 <form method='get' action='http://<?= $ite ?>/fonction/majFlashCard.php' target='_blank'   class='masquer' id='carte_<?= $i ?>'>
 
-    <input type='text' name='id' value=' <?= $table['ID'] ?> ' >
     <input type='hidden' name='id' value=' <?= $table['ID'] ?> ' >
     <input type='hidden' name='niveau' value=' <?= $table['niveau'] ?> ' >
-    <input type='texte' name='uuu' value=' bleurg' >
 
     <section >
-        <h2>ID = <?= $table['ID'] ?> </h2>
-        <h2>famille = <?= $table['famille'] ?> </h2>
         <article class='question'>
             <fieldset>
                 <legend>Question</legend>

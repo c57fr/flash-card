@@ -73,7 +73,7 @@ class famille
         $reussi = mysqli_query (  $bdd ,  $requete ) ;// Execution de la requête 
         
         $trouver = mysqli_num_rows($reussi)   ;// Affiche le nombre de ligne trouver 
-        mysqli_free_result ( $requete ) ;//Libération de la memoire 
+//        mysqli_free_result ( $requete ) ;//Libération de la memoire NE MARCHE PAS !
 
         if( !$reussi )//Si il y a une erreur de communication avec la bdd
         {
