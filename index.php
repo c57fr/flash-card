@@ -65,8 +65,8 @@ switch( $ection )
 }
 echo '</fieldset>'."\n<br>" ;// Affichage estetique
 
-$_SESSION['site'] = $_COOKIE["serveur"] ; //Efface-moi
-$racine = $_COOKIE["racine"] ; //Efface-moi
+@$_SESSION['site'] = $_COOKIE["serveur"] ; //Efface-moi
+@$racine = $_COOKIE["racine"] ; //Efface-moi
 
 
 ?>
