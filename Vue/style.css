@@ -1,4 +1,4 @@
-
+body
 {
     background-color: black;
     color: blanchedalmond;    
@@ -11,4 +11,12 @@ a
 {
     display: none ;
 
+}
+nav a
+{
+    display: inline-block;
+
+    font-size : 1.6em ;
+    
+    margin-left: 5% ;
 }
