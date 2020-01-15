@@ -6,7 +6,7 @@ require_once("$racine/fonction/bdd.php");
 require_once("$racine/fonction/objets/constructCard.php");
 
 
-$_SESSION['familleDefaut'] = $famille = $_POST[ 'famille' ] ;
+$_SESSION['familleDefaut'] = $famille = $_POST[ 'famille' ]-1 ;
 $question= $_POST[ 'question' ] ;
 $reponse= $_POST[ 'reponse' ] ;
 $famille = new card( $bdd , $question , $reponse, $famille ) ;

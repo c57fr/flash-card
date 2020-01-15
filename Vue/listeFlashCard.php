@@ -26,6 +26,35 @@
 //            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
         }
     }
+    function affReponse()
+    {
+
+            if ( document.getElementById(  'carte_'+i  ) )
+            {
+    //        alert( 'flashCard_'+i );
+            document.getElementById( 'carte_'+i ).style.display = "none" ;
+            i++ ;
+            document.getElementById( 'carte_'+i ).style.display = "block" ;
+        }
+        else{
+            window.location.reload() ;
+//            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
+        }
+    }
+    
+    function affReponse()
+    {
+//        reponse_< ?= $i ?>
+            if ( document.getElementById(  'reponse_'+i  ) )
+            {
+    //        alert( 'flashCard_'+i );
+            document.getElementById( 'reponse_'+i ).style.display = "block" ;
+        }
+        else{
+            window.location.reload() ;
+//            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
+        }
+    }
 </script>
 
 
@@ -52,10 +81,10 @@ foreach ($listeFlashCard as $key => $table) {
         </article>
 
         <div class='affReponse' >
-            <p>Affiché la réponse</p>
+            <p onclick='affReponse()'>Affiché la réponse</p>
         </div>
 
-        <article class='reponse_<?= $i ?>' >
+        <article class='reponse' >
             <fieldset>   
                 <legend>Réponse</legend>   
                 <?= $table['reponse'] ?>
