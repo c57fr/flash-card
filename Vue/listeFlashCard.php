@@ -38,7 +38,7 @@ foreach ($listeFlashCard as $key => $table) {
 <input type="radio" id="radio<?= $i ?>" name="lesRadios"  class="lesRadios" <?php if($i ==0 ): ?> checked <?php endif ; // si c'est la 1er carte elle s'affiche sinon elle reste caché ?> >
 <form method='get' action='http://<?= $ite ?>/fonction/majFlashCard.php' target='_blank'   class='masquer' id='carte_<?= $i ?>'>
 
-    <input type='hidden' name='id' value=' <?= $table['ID'] ?> ' >
+    <input type='hidden' name='id' value=' <?= $table['id'] ?> ' >
     <input type='hidden' name='niveau' value=' <?= $table['niveau'] ?> ' >
 <!--    <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />    EFFACE-MOI -->
             <fieldset>  

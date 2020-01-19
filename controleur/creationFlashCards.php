@@ -26,13 +26,16 @@ menueDeroulant ;
     }
 ?>
 </select>
-
-
     <input type="reset" id='Reset' value="Reset">
-    <br>
-    <textarea name='question'placeholder="Placer votre question ici" spellcheck='false'  minlength=3 maxlength=250 required autofocus></textarea>
-    <textarea name='reponse' placeholder="Placer votre réponse ici"  spellcheck='false'   minlength=3 maxlength=250 required ></textarea>
 
-    <input type="submit" value="Envoyer">
+
+    <br>
+    <textarea name='question'placeholder="Placer votre question ici" spellcheck='false'  minlength=3 maxlength=250 required autofocus rows="5" cols="53"></textarea>
+    <br>
+    <textarea name='reponse' placeholder="Placer votre réponse ici"  spellcheck='false'   minlength=3 maxlength=250 required  rows="5" cols="53"></textarea>
+
+    <input type="submit" value="Envoyer" class='boutonCreation'>
+    
+    <input type="reset" id='Reset' value="Reset" class='boutonCreation'>
 
 </form>

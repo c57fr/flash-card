@@ -20,11 +20,23 @@ public function __construct( $bdd )
 public function reqSelct()
 {
     $bdd = $this->bdd  ;
-
+// GROUP BY cards.ID
     $old_requete = "SELECT * FROM cards WHERE dateDeVue <= NOW() AND  niveau != 0 ORDER BY RAND() LIMIT  15 " ;//Construction de la requête     
     $requete = <<<'req'
-    SELECT * FROM cards , famille WHERE dateDeVue <= NOW() AND  niveau != 0 ORDER BY RAND() LIMIT  15 ;
+    SELECT DISTINCT 
+cards.id , cards.question , cards.reponse , cards.niveau ,cards.famille , famille.name FROM cards , famille
+WHERE cards.famille = famille.famille 
+AND
+dateDeVue <= NOW()
+AND
+niveau != 0 
+ORDER BY
+RAND()
+LIMIT 15
+
+
 req ;    
+//    SELECT DISTINCT * FROM cards , famille WHERE dateDeVue <= NOW() AND  niveau != 0 ORDER BY RAND() LIMIT  15 ; // fFonctionne avec doublon
     $reussi = mysqli_query (  $bdd ,  $requete ) ;// Execution de la requête 
     
     foreach ($reussi as $key => $table) {
