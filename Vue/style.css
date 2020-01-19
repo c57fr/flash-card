@@ -32,7 +32,7 @@ boutonAffReponse
     -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
     box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
 }
-.boutonAffReponse , .boutonJuste , .boutonFaux , .questionReponse
+.boutonAffReponse , .boutonJuste , .boutonFaux , .questionReponse , .Famille
 {
     color:black;
     color: darkgrey ;
@@ -55,7 +55,7 @@ boutonAffReponse
     margin-top: 30px ;
     
 }
-.questionReponse , .reponse
+.questionReponse , .reponse , .Famille
 {
     box-shadow: none ;
     background-color: black ;
@@ -63,6 +63,13 @@ boutonAffReponse
 
     padding: auto ;
     margin: auto ;
+}
+.Famille
+{
+    color: maroon ;
+    color: yellowgreen ;
+    text-shadow: whitesmoke 5px 3px ;
+    text-shadow: maroon 2px 3px ;
 }
 .boutonJuste
 {

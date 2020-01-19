@@ -43,7 +43,7 @@ foreach ($listeFlashCard as $key => $table) {
 <!--    <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />    EFFACE-MOI -->
             <fieldset>  
                 <legend>Famille</legend>
-                <p class="questionReponse" ><?= $table['name'] ?> </p>
+                <p class="Famille" ><?= $table['name'] ?> </p>
             </fieldset>  
 
             <fieldset>  
