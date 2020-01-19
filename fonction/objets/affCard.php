@@ -21,7 +21,10 @@ public function reqSelct()
 {
     $bdd = $this->bdd  ;
 
-    $requete = "SELECT * FROM cards WHERE dateDeVue <= NOW() AND  niveau != 0 ORDER BY RAND() LIMIT  15 " ;//Construction de la requête     
+    $old_requete = "SELECT * FROM cards WHERE dateDeVue <= NOW() AND  niveau != 0 ORDER BY RAND() LIMIT  15 " ;//Construction de la requête     
+    $requete = <<<'req'
+    SELECT * FROM cards , famille WHERE dateDeVue <= NOW() AND  niveau != 0 ORDER BY RAND() LIMIT  15 ;
+req ;    
     $reussi = mysqli_query (  $bdd ,  $requete ) ;// Execution de la requête 
     
     foreach ($reussi as $key => $table) {

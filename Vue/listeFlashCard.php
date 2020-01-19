@@ -42,6 +42,11 @@ foreach ($listeFlashCard as $key => $table) {
     <input type='hidden' name='niveau' value=' <?= $table['niveau'] ?> ' >
 <!--    <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />    EFFACE-MOI -->
             <fieldset>  
+                <legend>Famille</legend>
+                <p class="questionReponse" ><?= $table['name'] ?> </p>
+            </fieldset>  
+
+            <fieldset>  
                 <legend>Question</legend>
                 <p class="questionReponse" ><?= $table['question'] ?> </p>
             </fieldset>  
