@@ -15,6 +15,11 @@ foreach ($listeFlashCard as $key => $table) {
 {
     display:none;
 }
+
+#bouton_<?= $i ?>:checked +  #reponse_<?= $i ?>
+{
+    display:block;
+}
 #radio<?= $i ?>:checked +  .masquer
 {
     display: block ;
@@ -35,7 +40,8 @@ foreach ($listeFlashCard as $key => $table) {
             <label for="bouton_<?= $i ?>"  class="boutonAffReponse" >    
                 bouton sur CSS pour Affiché la Réponse 
             </label>
-            
+        
+        <input type="checkbox" id="bouton_<?= $i ?>" />   
         <article id='reponse_<?= $i ?>' >
             <fieldset>   
                 <legend>Réponse</legend>   
