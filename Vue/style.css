@@ -7,11 +7,6 @@ a
 {
     color: blue;
 }
-#carte_1
-{
-    display: none ;
-
-}
 nav a
 {
     display: inline-block;
@@ -19,4 +14,26 @@ nav a
     font-size : 1.6em ;
     
     margin-left: 5% ;
+}
+.boutonAffReponse
+{
+    margin: 0 3px;
+    display: inline-block;
+    font: 12px / 13px "Lucida Grande", sans-serif;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    padding: 3px 6px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: #969696;
+    cursor: default;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+}
+
+.masquer , .boutonAffReponse , .lesRadios
+{
+    display : none ;
 }
