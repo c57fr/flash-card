@@ -11,14 +11,19 @@ foreach ($listeFlashCard as $key => $table) {
 
 <style>
 
-#reponse_<?= $i ?>
+#reponse_<?= $i ?>,#boutonAffReponse_<?= $i ?>
 {
     display:none;
 }
 
-#bouton_<?= $i ?>:checked +  #reponse_<?= $i ?>
+#boutonAffReponse_<?= $i ?>:checked ~  #reponse_<?= $i ?> 
 {
     display:block;
+}
+#boutonAffReponse_<?= $i ?>:checked ~ .boutonAffReponse
+{
+    display: none ;
+    background-color: green ;
 }
 #radio<?= $i ?>:checked +  .masquer
 {
@@ -32,17 +37,18 @@ foreach ($listeFlashCard as $key => $table) {
 
     <input type='hidden' name='id' value=' <?= $table['ID'] ?> ' >
     <input type='hidden' name='niveau' value=' <?= $table['niveau'] ?> ' >
-<!--    <input type="checkbox" id="bouton_<?= $i ?>" />    EFFACE-MOI -->
+<!--    <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />    EFFACE-MOI -->
             <fieldset>  
                 <legend>Question</legend>
                 <?= $table['question'] ?>
             </fieldset>  
         </article>
-            <label for="bouton_<?= $i ?>"  class="boutonAffReponse" >    
+        
+        <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />   
+            <label for="boutonAffReponse_<?= $i ?>"  class="boutonAffReponse" >    
                 bouton sur CSS pour Affiché la Réponse 
             </label>
         
-        <input type="checkbox" id="bouton_<?= $i ?>" />   
         <article id='reponse_<?= $i ?>' >
             <fieldset>   
                 <legend>Réponse</legend>   
