@@ -32,6 +32,50 @@ boutonAffReponse
     -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
     box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
 }
+.boutonAffReponse , .boutonJuste , .boutonFaux , .questionReponse
+{
+    color:black;
+    color: darkgrey ;
+    font: 12px / 13px "Lucida Grande", sans-serif;
+    font-size: 1.4em ;
+    font-weight: bold ;
+    text-shadow: rgba(82, 82, 82, 0.4) 0 1px;
+    text-shadow: white ; 
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    box-shadow: rgba(39, 1, 145, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    
+    text-align: center ;
+
+    height: 15px ;
+    height: 20px ;
+    width: 90% ;
+    display: block;
+    padding-top: 8px ;
+    margin: auto ;
+    margin-top: 30px ;
+    
+}
+.questionReponse , .reponse
+{
+    box-shadow: none ;
+    background-color: black ;
+    color: blanchedalmond ;
+
+    padding: auto ;
+    margin: auto ;
+}
+.boutonJuste
+{
+    box-shadow: rgba(28, 39, 30, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    background-color: rgb(127, 255, 0 , 0.3) ;
+    height: 1.8em ;
+}
+.boutonFaux
+{
+    box-shadow: rgba(241, 3, 3, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    background-color: rgb(220, 20, 60 , 0.3 ) ;
+    height: 1.8em ;
+}
 
 .masquer , boutonAffReponse , .lesRadios
 {

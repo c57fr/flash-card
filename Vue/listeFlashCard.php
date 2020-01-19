@@ -19,6 +19,9 @@ foreach ($listeFlashCard as $key => $table) {
 #boutonAffReponse_<?= $i ?>:checked ~  #reponse_<?= $i ?> 
 {
     display:block;
+    margin-top: 30px ;
+-    box-shadow: rgba(39, 1, 145, 0.4) 0 1px, inset 0 20px 20px 10px gray;
+    border: thick double #32a1ce;
 }
 #boutonAffReponse_<?= $i ?>:checked ~ .boutonAffReponse
 {
@@ -40,10 +43,10 @@ foreach ($listeFlashCard as $key => $table) {
 <!--    <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />    EFFACE-MOI -->
             <fieldset>  
                 <legend>Question</legend>
-                <?= $table['question'] ?>
+                <p class="questionReponse" ><?= $table['question'] ?> </p>
             </fieldset>  
         </article>
-        
+
         <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />   
             <label for="boutonAffReponse_<?= $i ?>"  class="boutonAffReponse" >    
                 bouton sur CSS pour Affiché la Réponse 
@@ -52,12 +55,12 @@ foreach ($listeFlashCard as $key => $table) {
         <article id='reponse_<?= $i ?>' >
             <fieldset>   
                 <legend>Réponse</legend>   
-                <?= $table['reponse'] ?>
+                <p  class='questionReponse'> <?= $table['reponse'] ?> </p>
             </fieldset>  
 
-            <input type="submit" name='validation' value='juste' >
-            <input type="submit" name='validation' value='faux' >
-            <label for="radio<?= ++$i ?>"  class="" >    
+            <input type="submit" name='validation' class='boutonJuste' value='juste' >
+            <input type="submit" name='validation' class='boutonFaux' value='faux' >
+            <label for="radio<?= ++$i ?>"    class="boutonAffReponse"  >    
                 Passer a la flash-card suivante
             </label>
         </article>
