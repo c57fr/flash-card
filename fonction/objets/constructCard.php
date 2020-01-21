@@ -24,6 +24,13 @@ private function securiter( $question , $reponse , $famille ): void
     $question = htmlentities( $question ) ;
     $reponse = htmlentities( $reponse ) ;
     $famille = (int)$famille ;
+
+    $question = str_replace( "\n", '<br><br>', $question  );
+    $reponse = str_replace( "\n", '<br><br>', $reponse  );
+    
+    $question = addslashes( $question );
+    $reponse = addslashes( $reponse );
+    
     $this-> question = $question ;
     $this-> reponse = $reponse ;
     $this-> famille = $famille ;

@@ -9,6 +9,7 @@ require_once("$racine/fonction/objets/constructCard.php");
 $_SESSION['familleDefaut'] = $famille = $_POST[ 'famille' ] ;
 $question= $_POST[ 'question' ] ;
 $reponse= $_POST[ 'reponse' ] ;
+
 $famille = new card( $bdd , $question , $reponse, $famille ) ;
 $famille -> enregistrecards() ;
 //  echo '<h1>question = '.$question.'</h1> <pre> '."\n"; //Efface-moi
