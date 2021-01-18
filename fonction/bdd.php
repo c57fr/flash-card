@@ -1,6 +1,6 @@
 <?php
 
-$servername = 'homestead.test';
+$servername = 'localhost';
 $username = 'phpmyadmin';
 $password = '123456';
 $baseDeDonnee = 'flashCard';

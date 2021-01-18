@@ -44,11 +44,16 @@ foreach ($listeFlashCard as $key => $table) {
             <fieldset>  
                 <legend>Famille</legend>
                 <p class="Famille" ><?= $table['name'] ?> </p>
-            </fieldset>  
+            </fieldset> 
+<?php
+// Affichage des listes aléatoires si le premier caractére est un %
+$maFonction = NEW listeAleatoire( $table['question'] ) ;
+$question = $maFonction-> getListe() ;
+?> 
 
             <fieldset>  
                 <legend>Question</legend>
-                <p class="questionReponse" ><?= $table['question'] ?> </p>
+                <p class="questionReponse" ><?= $question ?> </p>
             </fieldset>  
         </article>
 
@@ -56,11 +61,15 @@ foreach ($listeFlashCard as $key => $table) {
             <label for="boutonAffReponse_<?= $i ?>"  class="boutonAffReponse" >    
                 bouton sur CSS pour Affiché la Réponse 
             </label>
-        
+<?php
+// Affichage des listes aléatoires si le premier caractére est un %
+$maFonction = NEW listeAleatoire( $table['reponse'] ) ;
+$reponse = $maFonction-> getListe() ;
+?>
         <article id='reponse_<?= $i ?>' >
             <fieldset>   
                 <legend>Réponse</legend>   
-                <p  class='questionReponse'> <?= $table['reponse'] ?> </p>
+                <p  class='questionReponse'> <?= $reponse ?> </p>
             </fieldset>  
 
             <input type="submit" name='validation' class='boutonJuste' value='juste' >
