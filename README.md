@@ -13,9 +13,10 @@ Cette version est opérationnel  !
 
 # Installation :
 
-1.télecharger le site dans la racine du serveur  
-( si vous voulez personnalisé le chemin d'accès édité le fichier fonction\racine.php )  
-2.Allez sur votreSite.com/flash-card  
-3.Allez dans le fichier **fonction\bdd.php** entré le nom de vôtre site + la table + l'identifiant + le mot de passe  
-3.cliquer sur le lien **Création Des Tables**  
-4.Fini ;-)
+- 1 Clôner ce dépôt dans la racine de votre serveur local (Si vous voulez personnaliser le chemin d'accès édité le fichier fonction\racine.php)  
+
+- 2 Créer votre BdD flash-card (Pour adapter ce paramètre, voir le fichier ***fonction\bdd.php*** )
+
+- 3  Allez sur localhost/flash-card et cliquer sur le lien **Création Des Tables**  
+
+- 4 Fini ;-)
