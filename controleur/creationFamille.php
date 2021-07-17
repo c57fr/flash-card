@@ -4,6 +4,6 @@
 
     <input type="submit" value="Envoyer">
     <br>
-    <input type="reset" id='Reset' value="Reset">
+    <input type="reset" id='Reset' value="Reset" class='boutonCreation'>
 
 </form>

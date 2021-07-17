@@ -23,6 +23,11 @@ switch( $ection )
         legende('Affiché une Flash-Card') ;
 //        echo '<h1>section = '.$ection.'</h1>'; //Efface-moi
         include_once("$racine/controleur/affichageFlashCard.php") ;
+echo <<<'EOD'
+    <textarea name='reponse' spellcheck='false' class="blocknote" minlength=3 maxlength=250 required  rows="5" cols="53"></textarea>
+EOD;
+
+
     break ;
 
 //**********************************************************************************************************

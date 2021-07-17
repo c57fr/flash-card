@@ -7,11 +7,6 @@ a
 {
     color: blue;
 }
-#carte_1
-{
-    display: none ;
-
-}
 nav a
 {
     display: inline-block;
@@ -19,4 +14,99 @@ nav a
     font-size : 1.6em ;
     
     margin-left: 5% ;
+}
+boutonAffReponse
+{
+    margin: 0 3px;
+    display: inline-block;
+    font: 12px / 13px "Lucida Grande", sans-serif;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    padding: 3px 6px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: #969696;
+    cursor: default;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+}
+.boutonAffReponse , .boutonJuste , .boutonFaux , .old_questionReponse , .Famille , .boutonCreation
+{
+    color:black;
+    color: darkgrey ;
+    font: 12px / 13px "Lucida Grande", sans-serif;
+    font-size: 1.4em ;
+    font-weight: bold ;
+    text-shadow: rgba(82, 82, 82, 0.4) 0 1px;
+    text-shadow: white ; 
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+    box-shadow: rgba(39, 1, 145, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    
+    text-align: center ;
+
+    height: 15px ;
+    height: 20px ;
+    width: 90% ;
+    display: block;
+    padding-top: 8px ;
+    margin: auto ;
+    margin-top: 30px ;
+    
+}
+.old_questionReponse , .reponse , .Famille
+{
+    box-shadow: none ;
+    background-color: black ;
+    color: blanchedalmond ;
+
+    padding: auto ;
+    margin: auto ;
+}
+.questionReponse
+{
+    background-color: #3C1503 ;
+}
+.Famille
+{
+    color: maroon ;
+    color: yellowgreen ;
+    text-shadow: whitesmoke 5px 3px ;
+    text-shadow: maroon 2px 3px ;
+}
+.boutonJuste
+{
+    box-shadow: rgba(28, 39, 30, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    background-color: rgb(127, 255, 0 , 0.3) ;
+    height: 1.8em ;
+}
+.boutonFaux
+{
+    box-shadow: rgba(241, 3, 3, 0.4) 0 1px, inset 0 20px 20px -10px white;
+    background-color: rgb(220, 20, 60 , 0.3 ) ;
+    height: 1.8em ;
+}
+
+.masquer , boutonAffReponse , .lesRadios
+{
+    display : none ;
+}
+
+textarea {
+    font-size: 1.8rem;
+-    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+.boutonCreation
+{
+    padding: 0 ;
+    height: 35px;
+    
 }

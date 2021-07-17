@@ -1,75 +1,101 @@
-<style>
-.masquer
-{
-    display : none ;
-}
-#carte_0
-{
-    display : block ;
-}
-</style>
 
-<script>
-    var i = 0 ;
-    function affMasqueFlashCard()
-    {
-
-            if ( document.getElementById(  'carte_'+i  ) )
-            {
-    //        alert( 'flashCard_'+i );
-            document.getElementById( 'carte_'+i ).style.display = "none" ;
-            i++ ;
-            document.getElementById( 'carte_'+i ).style.display = "block" ;
-        }
-        else{
-            window.location.reload() ;
-//            alert('Félicitation ! vous avez terminer de testé toutes les flash-cardes du jour !');
-        }
-    }
-</script>
-
+<script type="text/javascript" src="affMasqueFlashCard.js"></script><!-- Encienne version en javascript gardé car on ne sait jamais :-) -->
 
 <?php
-//  session_start() ; //EFFACE-MOI
-//  $reussi = $_SESSION['flashcard'] ; //EFFACE-MOI
+
 $i=0 ;
 
 foreach ($listeFlashCard as $key => $table) {
 //    print_r( $table ) ;
 ?>
 
+<style>
+
+#reponse_<?= $i ?>,#boutonAffReponse_<?= $i ?>
+{
+    display:none;
+}
+
+#boutonAffReponse_<?= $i ?>:checked ~  #reponse_<?= $i ?> 
+{
+    display:block;
+    margin-top: 30px ;
+-    box-shadow: rgba(39, 1, 145, 0.4) 0 1px, inset 0 20px 20px 10px gray;
+    border: thick double #32a1ce;
+}
+#boutonAffReponse_<?= $i ?>:checked ~ .boutonAffReponse
+{
+    display: none ;
+    background-color: green ;
+}
+#radio<?= $i ?>:checked +  .masquer
+{
+    display: block ;
+}
+
+</style>
+
+<input type="radio" id="radio<?= $i ?>" name="lesRadios"  class="lesRadios" <?php if($i ==0 ): ?> checked <?php endif ; // si c'est la 1er carte elle s'affiche sinon elle reste caché ?> >
 <form method='get' action='http://<?= $ite ?>/fonction/majFlashCard.php' target='_blank'   class='masquer' id='carte_<?= $i ?>'>
 
-    <input type='hidden' name='id' value=' <?= $table['ID'] ?> ' >
+    <input type='hidden' name='id' value=' <?= $table['id'] ?> ' >
     <input type='hidden' name='niveau' value=' <?= $table['niveau'] ?> ' >
+<!--    <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />    EFFACE-MOI -->
+            <fieldset>  
+                <legend>Famille</legend>
+                <p class="Famille" ><?= $table['name'] ?> </p>
+            </fieldset> 
+<?php
+// Affichage des listes aléatoires si le premier caractére est un %
+$maFonction = NEW listeAleatoire( $table['question'] ) ;
+$question = $maFonction-> getListe() ;
+?> 
 
-    <section >
-        <article class='question'>
-            <fieldset>
+            <fieldset>  
                 <legend>Question</legend>
-                <?= $table['question'] ?>
+                <p class="questionReponse" ><?= $question ?> </p>
             </fieldset>  
         </article>
 
-        <div class='affReponse' >
-            <p>Affiché la réponse</p>
-        </div>
-
-        <article class='reponse_<?= $i ?>' >
+        <input type="checkbox" id="boutonAffReponse_<?= $i ?>" />   
+            <label for="boutonAffReponse_<?= $i ?>"  class="boutonAffReponse" >    
+                bouton sur CSS pour Affiché la Réponse 
+            </label>
+<?php
+// Affichage des listes aléatoires si le premier caractére est un %
+$maFonction = NEW listeAleatoire( $table['reponse'] ) ;
+$reponse = $maFonction-> getListe() ;
+?>
+        <article id='reponse_<?= $i ?>' >
             <fieldset>   
                 <legend>Réponse</legend>   
-                <?= $table['reponse'] ?>
+                <p  class='questionReponse'> <?= $reponse ?> </p>
             </fieldset>  
 
-            <input type="submit" name='validation' value='juste' >
-            <input type="submit" name='validation' value='faux' >
+            <input type="submit" name='validation' class='boutonJuste' value='juste' >
+            <input type="submit" name='validation' class='boutonFaux' value='faux' >
+            <label for="radio<?= ++$i ?>"    class="boutonAffReponse"  >    
+                Passer a la flash-card suivante
+            </label>
         </article>
         
     </section>
 </form>
 
 <?php
-$i++ ;
 }
 ?>
-<h3 onclick="affMasqueFlashCard( );">Passer a la flash-card suivante</h3>
+<!-- <h3 onclick="affMasqueFlashCard( );">Passer a la flash-card suivante</h3> -->
+<style>
+    #radio<?= $i ?>:checked +  .masquer
+    {
+        display: block ;
+    }
+</style>
+<input type="radio" id="radio<?= $i ?>" name="lesRadios"  class="lesRadios" >
+<div    class='masquer' >
+    <h3>Recherché de nouvelles cartes</h3>
+    <form action="<?= $_SESSION['site'] ?>" >
+        <input type="submit"  >
+    </form>
+</div>
